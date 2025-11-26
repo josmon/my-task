@@ -1,0 +1,37 @@
+.task-input{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.task-input-field{
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    transition:border-color 0.3s;
+}
+
+.task-input-field:focus{
+    outline: none;
+    border-color: #007bff;
+}
+
+.add-button{
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+    transition: background-color 0 0.3s;
+}
+
+.add-button:hover{
+    background-color: #0056b3;
+}
+
+.add-button:active{
+    transform: scale(0.98);
+}

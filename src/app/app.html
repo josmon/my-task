@@ -1,0 +1,27 @@
+<div class="container">
+  <h1>My Task List Application</h1>
+  <!-- Statistics Component-->
+   <app-task-stats 
+    [totalTasks]="tasks.length"
+    [completedTasks]="compleetedTasksCount"></app-task-stats>
+    <!-- Input Component-->
+     <app-task-input
+        (taskAdded)="handleTaskAdded($event)"></app-task-input>
+
+        <!-- Task List using Angular 17 @for-->
+         <div class="task-list">
+            @for(task of tasks;track task.id){
+              <app-task-item
+                [task]="task.text"
+                [index]="$index"
+                (taskDeleted)="handleTaskDeleted($event)"></app-task-item>
+            }
+         </div>
+
+         <!--Empty State using Angular 17 @if-->
+         @if(tasks.length===0){
+            <div class="empty-state">
+                <p>No tasks yet. Add one above to get started!</p>
+            </div>
+         }
+</div>
