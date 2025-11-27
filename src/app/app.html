@@ -12,9 +12,10 @@
          <div class="task-list">
             @for(task of tasks;track task.id){
               <app-task-item
-                [task]="task.text"
-                [index]="$index"
-                (taskDeleted)="handleTaskDeleted($event)"></app-task-item>
+               [task]="task.text"
+               [index]="$index"
+               (taskDeleted)="handleTaskDeleted($event)"
+               (taskCompleted)="handleTaskCompleted($event)"></app-task-item>
             }
          </div>
 
